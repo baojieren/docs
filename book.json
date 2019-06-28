@@ -1,0 +1,23 @@
+{
+  "title": "人在广东已经嫖到失联",
+  "author": "BAO JIE",
+  "description": "人在广东已经嫖到失联",
+  "language": "zh-hans",
+  "structure": {
+    "readme": "README.md"
+  },
+  "plugins": [
+    "-search",
+    "-lunr",
+    "search-pro",
+    "chapter-fold",
+    "splitter",
+    "anchors",
+    "anchor-navigation-ex"
+  ],
+  "pluginsConfig": {
+    "anchor-navigation-ex": {
+      "showLevel": false
+    }
+  }
+}
