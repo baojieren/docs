@@ -93,8 +93,8 @@
 正式地址: https://api.baojie.ink/logout  
 请求方式: POST  
 请求参数:
-```json
-nul
+```
+
 ```
 返回结果:
 ```json
