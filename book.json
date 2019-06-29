@@ -3,6 +3,7 @@
   "author": "BAO JIE",
   "description": "人在广东已经嫖到失联",
   "language": "zh-hans",
+  "gitbook": "3.2.3",
   "structure": {
     "readme": "README.md"
   },
@@ -20,7 +21,7 @@
     "-lunr",
     "search-pro",
     "expandable-chapters-small",
-    "anchor-navigation-ex"
+    "anchor-navigation-ex@0.1.8"
   ],
   "pluginsConfig": {
     "anchor-navigation-ex": {
