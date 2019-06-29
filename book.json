@@ -1,5 +1,5 @@
 {
-  "title": "",
+  "title": "富贵险中求",
   "author": "BAO JIE",
   "description": "人在广东已经嫖到失联",
   "language": "zh-hans",
@@ -11,13 +11,15 @@
     "-lunr",
     "search-pro",
     "splitter",
-    "anchors",
-    "anchor-navigation-ex",
+    "ancre-navigation",
+    "hide-element",
     "chapter-fold"
   ],
   "pluginsConfig": {
-    "anchor-navigation-ex": {
-      "showLevel": false
+    "hide-element": {
+      "elements": [
+        ".gitbook-link"
+      ]
     }
   }
 }
