@@ -11,6 +11,7 @@
     "-lunr",
     "search-pro",
     "splitter",
+    "anchors",
     "ancre-navigation",
     "hide-element",
     "chapter-fold"
