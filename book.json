@@ -10,19 +10,16 @@
     "-search",
     "-lunr",
     "search-pro",
+    "chapter-fold",
     "splitter",
-    "anchor-navigation-ex",
-    "hide-element",
-    "chapter-fold"
+    "ancre-navigation",
+    "hide-element"
   ],
   "pluginsConfig": {
     "hide-element": {
       "elements": [
         ".gitbook-link"
       ]
-    },
-    "anchor-navigation-ex": {
-      "showLevel": false
     }
   }
 }
