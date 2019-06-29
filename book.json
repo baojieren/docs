@@ -11,8 +11,7 @@
     "-lunr",
     "search-pro",
     "splitter",
-    "anchors",
-    "ancre-navigation",
+    "anchor-navigation-ex",
     "hide-element",
     "chapter-fold"
   ],
@@ -21,6 +20,9 @@
       "elements": [
         ".gitbook-link"
       ]
+    },
+    "anchor-navigation-ex": {
+      "showLevel": false
     }
   }
 }
