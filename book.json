@@ -21,7 +21,7 @@
     "-lunr",
     "search-pro",
     "expandable-chapters-small",
-    "anchor-navigation-ex@0.1.8"
+    "anchor-navigation-ex"
   ],
   "pluginsConfig": {
     "anchor-navigation-ex": {
