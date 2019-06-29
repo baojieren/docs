@@ -6,18 +6,29 @@
   "structure": {
     "readme": "README.md"
   },
+  "links": {
+    "gitbook": false,
+    "sharing": {
+      "google": false,
+      "facebook": false,
+      "twitter": false,
+      "all": false
+    }
+  },
   "plugins": [
     "-search",
     "-lunr",
     "search-pro",
-    "chapter-fold",
-    "splitter",
-    "anchors",
+    "expandable-chapters-small",
     "anchor-navigation-ex"
   ],
   "pluginsConfig": {
     "anchor-navigation-ex": {
-      "showLevel": false
+      "isRewritePageTitle": true,
+      "isShowTocTitleIcon": true,
+      "tocLevel1Icon": "fa fa-hand-o-right",
+      "tocLevel2Icon": "fa fa-hand-o-right",
+      "tocLevel3Icon": "fa fa-hand-o-right"
     }
   }
 }
