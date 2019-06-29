@@ -12,9 +12,12 @@
     "search-pro",
     "splitter",
     "anchors",
+    "anchor-navigation-ex",
     "chapter-fold"
   ],
   "pluginsConfig": {
-
+    "anchor-navigation-ex": {
+      "showLevel": false
+    }
   }
 }
