@@ -1,6 +1,6 @@
 # Summary
 
-### 前言
+### 简介
 
 ### API文档
 * [管理系统接口文档](API文档/mng_api_docs.md)
