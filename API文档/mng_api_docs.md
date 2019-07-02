@@ -51,8 +51,9 @@
 请求参数:
 ```json
 {
-	"phone":"18585131312",
-	"password":"142536"
+  "phone": "18585131312",
+  "password": "123456",
+  "userName": "baojieren"
 }
 ```
 返回结果:
@@ -75,6 +76,29 @@
 {
 	"phone":"18585131312",
 	"password":"142536" //新密码
+}
+```
+返回结果:
+```json
+{
+    "code": 0,
+    "msg": "成功"
+}
+```
+
+>### 修改资料
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/update  
+正式地址: https://api.baojie.ink/update  
+请求方式: POST  
+请求参数:
+```json
+{
+    "id": 1, //userId
+	"phone":"18585131312", //新手机号
+	"userName":"baojierne" //新用户名
 }
 ```
 返回结果:
@@ -160,6 +184,29 @@ null
 ```
 
 ## 题库中心
+
+>### 获取上传图片token
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/img/token  
+正式地址: https://api.baojie.ink/img/token  
+请求方式: GET  
+请求参数:
+```
+fileName=aaa.png //图片名称
+```
+返回结果:
+```json
+{
+    "code": 0,
+    "msg": "成功",
+    "data": {
+        "domain": "https://upload-z2.qiniup.com", //图片上传地址
+        "token": "Ki7rB" //token
+    }
+}
+```
 
 >### 上传题目
 
