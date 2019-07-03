@@ -10,8 +10,8 @@
 
 接口用途:   
 接口鉴权: 否  
-测试地址: https://api.baojie.ink/login  
-正式地址: https://api.baojie.ink/login  
+测试地址: https://api.baojie.ink/xmg/login  
+正式地址: https://api.baojie.ink/xmg/login  
 请求方式: POST  
 请求参数:
 ```json
@@ -45,8 +45,8 @@
 
 接口用途:   
 接口鉴权: 否  
-测试地址: https://api.baojie.ink/signUp  
-正式地址: https://api.baojie.ink/signUp  
+测试地址: https://api.baojie.ink/xmg/signUp  
+正式地址: https://api.baojie.ink/xmg/signUp  
 请求方式: POST  
 请求参数:
 ```json
@@ -68,8 +68,8 @@
 
 接口用途:   
 接口鉴权: 是  
-测试地址: https://api.baojie.ink/updatePass  
-正式地址: https://api.baojie.ink/updatePass  
+测试地址: https://api.baojie.ink/xmg/updatePass  
+正式地址: https://api.baojie.ink/xmg/updatePass  
 请求方式: POST  
 请求参数:
 ```json
@@ -90,8 +90,8 @@
 
 接口用途:   
 接口鉴权: 是  
-测试地址: https://api.baojie.ink/update  
-正式地址: https://api.baojie.ink/update  
+测试地址: https://api.baojie.ink/xmg/update  
+正式地址: https://api.baojie.ink/xmg/update  
 请求方式: POST  
 请求参数:
 ```json
@@ -113,8 +113,8 @@
 
 接口用途:   
 接口鉴权: 是  
-测试地址: https://api.baojie.ink/logout  
-正式地址: https://api.baojie.ink/logout  
+测试地址: https://api.baojie.ink/xmg/logout  
+正式地址: https://api.baojie.ink/xmg/logout  
 请求方式: POST  
 请求参数:
 ```
@@ -134,8 +134,8 @@ null
 
 接口用途:   
 接口鉴权: 否  
-测试地址: https://api.baojie.ink/user/list  
-正式地址: https://api.baojie.ink/user/list  
+测试地址: https://api.baojie.ink/xmg/user/list  
+正式地址: https://api.baojie.ink/xmg/user/list  
 请求方式: POST  
 请求参数:
 ```json
@@ -189,8 +189,8 @@ null
 
 接口用途:   
 接口鉴权: 是  
-测试地址: https://api.baojie.ink/img/token  
-正式地址: https://api.baojie.ink/img/token  
+测试地址: https://api.baojie.ink/xmg/img/token  
+正式地址: https://api.baojie.ink/xmg/img/token  
 请求方式: GET  
 请求参数:
 ```
@@ -212,8 +212,8 @@ fileName=aaa.png //图片名称
 
 接口用途:   
 接口鉴权: 否  
-测试地址: https://api.baojie.ink/quest/save  
-正式地址: https://api.baojie.ink/quest/save  
+测试地址: https://api.baojie.ink/xmg/quest/save  
+正式地址: https://api.baojie.ink/xmg/quest/save  
 请求方式: POST  
 请求参数:
 ```json
@@ -244,8 +244,8 @@ fileName=aaa.png //图片名称
 
 接口用途:   
 接口鉴权: 否  
-测试地址: https://api.baojie.ink/quest/delete  
-正式地址: https://api.baojie.ink/quest/delete  
+测试地址: https://api.baojie.ink/xmg/quest/delete  
+正式地址: https://api.baojie.ink/xmg/quest/delete  
 请求方式: GET  
 请求参数:
 ```json
@@ -264,8 +264,8 @@ id=2
 
 接口用途:   
 接口鉴权: 否  
-测试地址: https://api.baojie.ink/quest/one  
-正式地址: https://api.baojie.ink/quest/one  
+测试地址: https://api.baojie.ink/xmg/quest/one  
+正式地址: https://api.baojie.ink/xmg/quest/one  
 请求方式: GET  
 请求参数:
 ```json
@@ -307,8 +307,8 @@ id=2
 
 接口用途:   
 接口鉴权: 否  
-测试地址: https://api.baojie.ink/quest/update  
-正式地址: https://api.baojie.ink/quest/update  
+测试地址: https://api.baojie.ink/xmg/quest/update  
+正式地址: https://api.baojie.ink/xmg/quest/update  
 请求方式: POST  
 请求参数:
 ```json
@@ -340,8 +340,8 @@ id=2
 
 接口用途:   
 接口鉴权: 否  
-测试地址: https://api.baojie.ink/quest/list  
-正式地址: https://api.baojie.ink/quest/list  
+测试地址: https://api.baojie.ink/xmg/quest/list  
+正式地址: https://api.baojie.ink/xmg/quest/list  
 请求方式: POST  
 请求参数:
 ```json
@@ -392,8 +392,8 @@ id=2
 
 接口用途:   
 接口鉴权: 是  
-测试地址: https://api.baojie.ink/quest/review  
-正式地址: https://api.baojie.ink/quest/review  
+测试地址: https://api.baojie.ink/xmg/quest/review  
+正式地址: https://api.baojie.ink/xmg/quest/review  
 请求方式: POST  
 请求参数:
 ```json
