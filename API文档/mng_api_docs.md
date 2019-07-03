@@ -226,7 +226,7 @@ fileName=aaa.png //图片名称
     "difficult": 0, //0:简单,1:中等,2:困难
     "answerType": 1, //0:选择题,1:判断题,2:填空题
     "natureType": 0, //0:基础题,1:概念题,2:综合题
-    "option": [], //只有选择题才填该字段 例:["A:100","B:200","C:300"]
+    "option": [{ "key": "A", "value": "12" }, { "key": "B", "value": "20" }], //只有选择题才填该字段
     "unitId": 1, //该题目属于哪个单元id
     "knowledgeId": 1 //该题目属于哪个知识点id
 }
@@ -277,19 +277,24 @@ id=2
     "code": 0,
     "msg": "成功",
     "data": {
-        "id": 1,
+        "id": 8,
         "owner": 1,
-        "name": "2+2等于()?",
-        "quesKey": "0",
-        "analysis": "正确答案是4啊",
-        "limitTime": 20,
+        "name": "修改8",
+        "quesKey": "A",
+        "analysis": "分析",
+        "limitTime": 10,
         "difficult": 0,
         "answerType": 0,
         "natureType": 0,
         "option": [
-            "A:1",
-            "B:3",
-            "C:4"
+            {
+                "key": "A",
+                "value": "12"
+            },
+            {
+                "key": "B",
+                "value": "20"
+            }
         ],
         "unitId": 1,
         "knowledgeId": 1,
@@ -317,7 +322,7 @@ id=2
     "difficult": 0,
     "answerType": 2,
     "natureType": 0,
-    "option": ["A:1","B:3","C:4"],
+    "option": [],
     "unitId": 1,
     "knowledgeId": 1
 }
@@ -380,5 +385,29 @@ id=2
             }
         ]
     }
+}
+```
+
+>### 查询审核
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/quest/review  
+正式地址: https://api.baojie.ink/quest/review  
+请求方式: POST  
+请求参数:
+```json
+{
+  "id": 8, //题目id
+  "reviewDes": "不过", //审核说明
+  "valid": 2 //2:审核不通过 , 3:审核通过
+}
+```
+返回结果:
+```json
+{
+    "code": 0,
+    "msg": "成功",
+    "data": null
 }
 ```
