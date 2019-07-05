@@ -130,6 +130,30 @@ null
 
 ## 用户中心
 
+>### 首页老师概览
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/user/overview  
+正式地址: https://api.baojie.ink/xmg/user/overview  
+请求方式: GET  
+请求参数:
+```
+id=2
+```
+返回结果:
+```json
+{
+    "code": 0,
+    "msg": "成功",
+    "data": {
+        "userName": "任宝杰", //用户名
+        "passNum": 6, //通过的题目数
+        "usedNum": 3 //被使用的题目数
+    }
+}
+```
+
 >### 查询用户列表
 
 接口用途:   
@@ -185,6 +209,228 @@ null
 
 ## 题库中心
 
+>### 题库中心概览
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/quest/allOverview  
+正式地址: https://api.baojie.ink/xmg/quest/allOverview  
+请求方式: GET  
+请求参数:
+```
+null
+```
+返回结果:
+```json
+{
+    "code": 0,
+    "msg": "成功",
+    "data": {
+        "total": 0,
+        "list": [
+            {
+                "gradeName": "六年级", //年级名称
+                "bookName": "六年级数学上册", //教材名称
+                "unitNum": 1, //单元数量
+                "knowledgeNum": 1, //知识点数量
+                "simpleNum": 6, //总的简单题数
+                "simplePassNum": 5, //通过审核的简单题数
+                "mediumNum": 0, //总的中等题数
+                "mediumPassNum": 0, //通过审核的中等题数量
+                "hardNum": 0, //总的困难题数
+                "hardPassNum": 0 //通过审核的困难题数量
+            },
+            {
+                "gradeName": "六年级",
+                "bookName": "六年级英语下册",
+                "unitNum": 2,
+                "knowledgeNum": 1,
+                "simpleNum": 0,
+                "simplePassNum": 0,
+                "mediumNum": 0,
+                "mediumPassNum": 0,
+                "hardNum": 1,
+                "hardPassNum": 1
+            }
+        ]
+    }
+}
+```
+
+>### 获取所有的年级列表
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/grade/all  
+正式地址: https://api.baojie.ink/xmg/grade/all  
+请求方式: GET  
+请求参数:
+```
+null
+```
+返回结果:
+```json
+{
+    "code": 0,
+    "msg": "成功",
+    "data": {
+        "total": 1,
+        "list": [
+            {
+                "id": 3, //年级id
+                "gradeName": "三年级", //年级名称
+                "gradeDes": "湖南小学三年级", // 年级描述
+                "valid": 1, //0无效，1有效
+                "createTime": "2019-06-30 11:11:38",
+                "updateTime": "2019-06-30 11:13:04"
+            }
+        ]
+    }
+}
+```
+
+>### 根据年级id获取册列表
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/book/listByGradeId  
+正式地址: https://api.baojie.ink/xmg/book/listByGradeId  
+请求方式: GET  
+请求参数:
+```
+gradeId=6
+```
+返回结果:
+```json
+{
+    "code": 0,
+    "msg": "成功",
+    "data": {
+        "total": 2,
+        "list": [
+            {
+                "id": 1, //册id
+                "bookName": "六年级数学上册", //书名
+                "bookDes": "湖南小学六年级数学上册", //书描述
+                "gradeId": 6, //年级id
+                "valid": 1, //0无效，1有效
+                "createTime": "2019-06-30 09:32:56",
+                "updateTime": "2019-06-30 11:15:40"
+            },
+            {
+                "id": 2,
+                "bookName": "六年级英语下册",
+                "bookDes": "湖南小学",
+                "gradeId": 6,
+                "valid": 1,
+                "createTime": "2019-07-04 13:43:13",
+                "updateTime": "2019-07-04 13:43:13"
+            }
+        ]
+    }
+}
+```
+
+>### 根据册id获取单元列表
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/unit/listByBookId  
+正式地址: https://api.baojie.ink/xmg/unit/listByBookId  
+请求方式: GET  
+请求参数:
+```
+bookId=1
+```
+返回结果:
+```json
+{
+    "code": 0,
+    "msg": "成功",
+    "data": {
+        "total": 0,
+        "list": [
+            {
+                "id": 1, //单元id
+                "unitName": "小数乘法", //单元名称
+                "unitDes": "湖南小学六年级数学上册小数乘法", //单元描述
+                "bookId": 1, //册id
+                "valid": 1, //0无效，1有效
+                "createTime": "2019-06-30 09:33:33",
+                "updateTime": "2019-06-30 11:16:09"
+            }
+        ]
+    }
+}
+```
+
+>### 根据单元id获取知识点列表
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/knowledge/listByUnitId  
+正式地址: https://api.baojie.ink/xmg/knowledge/listByUnitId  
+请求方式: GET  
+请求参数:
+```
+unitId=1
+```
+返回结果:
+```json
+{
+    "code": 0,
+    "msg": "成功",
+    "data": {
+        "total": 0,
+        "list": [
+            {
+                "id": 1, //知识点id
+                "knowledgeName": "小数点移位", //知识点名称
+                "unitId": 1, //单元id
+                "totalQuestNum": 6, //总题目数
+                "passQuestNum": 5 //通过审核的题目数
+            }
+        ]
+    }
+}
+```
+
+>### 根据知识点id获取题目数
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/type/diffcult  
+正式地址: https://api.baojie.ink/xmg/type/diffcult  
+请求方式: GET  
+请求参数:
+```
+knowledgeId=1
+```
+返回结果:
+```json
+{
+    "code": 0,
+    "msg": "成功",
+    "data": [
+        {
+            "difficult": 0, //0:简单,1:中等,2:困难
+            "totalQuestSum": 7, //题目总数
+            "passQuestSum": 2 //审核通过数
+        },
+        {
+            "difficult": 1, //0:简单,1:中等,2:困难
+            "totalQuestSum": 2,
+            "passQuestSum": 1
+        },
+        {
+            "difficult": 2, //0:简单,1:中等,2:困难
+            "totalQuestSum": 10,
+            "passQuestSum": 2
+        }
+    ]
+}
+```
+
 >### 获取上传图片token
 
 接口用途:   
@@ -227,6 +473,8 @@ fileName=aaa.png //图片名称
     "answerType": 1, //0:选择题,1:判断题,2:填空题
     "natureType": 0, //0:基础题,1:概念题,2:综合题
     "option": [{ "key": "A", "value": "12" }, { "key": "B", "value": "20" }], //只有选择题才填该字段
+    "gradeId": 1, //年级id
+    "bookId": 1, //册id
     "unitId": 1, //该题目属于哪个单元id
     "knowledgeId": 1 //该题目属于哪个知识点id
 }
@@ -248,7 +496,7 @@ fileName=aaa.png //图片名称
 正式地址: https://api.baojie.ink/xmg/quest/delete  
 请求方式: GET  
 请求参数:
-```json
+```
 id=2
 ```
 返回结果:
@@ -268,7 +516,7 @@ id=2
 正式地址: https://api.baojie.ink/xmg/quest/one  
 请求方式: GET  
 请求参数:
-```json
+```
 id=2
 ```
 返回结果:
@@ -296,6 +544,8 @@ id=2
                 "value": "20"
             }
         ],
+        "gradeId": 1, //年级id
+        "bookId": 1, //册id
         "unitId": 1,
         "knowledgeId": 1,
         "remark": ""
@@ -323,6 +573,8 @@ id=2
     "answerType": 2,
     "natureType": 0,
     "option": [],
+    "gradeId": 1,
+    "bookId": 1,
     "unitId": 1,
     "knowledgeId": 1
 }
@@ -352,7 +604,9 @@ id=2
   "difficult": 1, //0:简单,1:中等,2:困难
   "answerType": 1, //0:选择题,1:判断题,2:填空题
   "natureType": 1, //0:基础题,1:概念题,2:综合题
-  "valid": 1 //0:无效，1:审核中 , 2:审核失败 , 3:审核成功
+  "valid": 1, //0:无效，1:审核中 , 2:审核失败 , 3:审核成功
+  "gradeId": 1, //年级id
+  "knowledgeId": 1 //知识点id
 }
 ```
 返回结果:
