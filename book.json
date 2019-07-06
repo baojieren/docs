@@ -1,9 +1,11 @@
 {
-  "title": "富贵险中求",
+  "title": "啊富贵险中求",
   "author": "BAO JIE",
   "description": "人在广东已经嫖到失联",
   "language": "zh-hans",
   "fontState": {
+    "size": "2",
+    "family": "sans",
     "theme": "night"
   },
   "plugins": [
