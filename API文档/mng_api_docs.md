@@ -128,7 +128,7 @@ null
 }
 ```
 
-## 用户中心
+## 后台首页
 
 >### 首页老师概览
 
@@ -618,24 +618,23 @@ id=2
         "total": 1,
         "list": [
             {
-                "phone": "18585131312", //上传者手机
-                "id": 4, //题目id
-                "owner": 1, 上传者id
-                "name": "2 X 2 = 5 对吗?", //题干
-                "quesKey": "错", //题目正确答案
-                "analysis": "正确答案是4啊", //歇息
-                "limitTime": 20, //做题时间
-                "difficult": 0,
-                "answerType": 1,
-                "natureType": 0,
-                "option": null, //选择题的选项
+                "id": 1, //题目id
+                "name": "2+2等于()?", //题干
+                "answerType": 0, //0:选择题,1:判断题,2:填空题
+                "grade": "六年级", //年级名称
                 "knowledge": "小数点移位", //知识点名称
-                "remark": "", //备注
-                "reviewDes": "", //审核说明
-                "valid": 0, //0:无效，1:审核中 , 2:审核失败 , 3:审核成功
-                "reviewDate": null, //审核日期
-                "reviewTime": null, //审核时间
-                "createTime": "2019-06-30 12:07:24" //题目创建时间
+                "reviewDes": "", //审核描述
+                "valid": 3, //0:无效，1:审核中 , 2:审核失败 , 3:审核成功
+                "commentPOList": [ //评论列表
+                    {
+                        "id": 1,
+                        "forType": 0, //0:题干,1:解析,2:答案
+                        "comment": "题目有问题", //评论语句
+                        "createTime": "2019-07-06T10:18:16",
+                        "updateTime": "2019-07-06T10:18:16"
+                    }
+                ],
+                "createTime": "2019-06-30 09:36:47" //创建时间
             }
         ]
     }
@@ -665,3 +664,6 @@ id=2
     "data": null
 }
 ```
+
+>## 我的财务
+
