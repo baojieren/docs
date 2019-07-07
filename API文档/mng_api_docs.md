@@ -598,6 +598,7 @@ id=2
 请求参数:
 ```json
 {
+  "userId": 1, //题目上传者id
   "startTime": "", //开始时间
   "endTime": "", //结束时间
   "name": "", //题目名称,支持模糊
@@ -667,3 +668,35 @@ id=2
 
 >## 我的财务
 
+>### 老师个人财务中心
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/finance/oneSelf  
+正式地址: https://api.baojie.ink/xmg/finance/oneSelf  
+请求方式: POST  
+请求参数:
+```
+userId=1
+```
+返回结果:
+```json
+{
+    "code": 0,
+    "msg": "成功",
+    "data": {
+        "uploadQuestSum": 7, //上传题目数
+        "passReviewSum": 6, //通过审核题目数
+        "usedSum": 3, // 被使用过题目数
+        "totalMoney": null, //总赚取金额
+        "withdrawAble": null, //可提现金额
+        "transRecordPOList": [
+        {
+            "transAmount": 0.5, //提现金额
+            "valid": 1, //0:转账失败 1:转账成功
+            "createTime": "2019-07-07 04:47:33" //提现日期
+         }
+        ] //转账记录
+    }
+}
+```
