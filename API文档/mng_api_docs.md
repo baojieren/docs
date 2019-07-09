@@ -395,6 +395,37 @@ unitId=1
 }
 ```
 
+>### 获取所有知识点列表
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/knowledge/all  
+正式地址: https://api.baojie.ink/xmg/knowledge/all  
+请求方式: GET  
+请求参数:
+```
+null
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": [
+    {
+      "id": 1,
+      "knowledgeName": "小数点移位", //知识点名称
+      "knowledgeDes": "湖南小学六年级数学上册小数乘法小数点移位" //知识点描述
+    },
+    {
+      "id": 2,
+      "knowledgeName": "主谓宾",
+      "knowledgeDes": "湖南小学"
+    }
+  ]
+}
+```
+
 >### 根据知识点id获取题目数
 
 接口用途:   
