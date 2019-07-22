@@ -267,8 +267,8 @@ null
 
 接口用途:   
 接口鉴权: 是  
-测试地址: https://api.baojie.ink/xmg/grade/all  
-正式地址: https://api.baojie.ink/xmg/grade/all  
+测试地址: https://api.baojie.ink/xmg/{mini}/grade/all  
+正式地址: https://api.baojie.ink/xmg/{mini}/grade/all  
 请求方式: GET  
 请求参数:
 ```
@@ -295,12 +295,12 @@ null
 }
 ```
 
->### 根据年级id获取册列表
+>### 根据年级id获取教材列表
 
 接口用途:   
 接口鉴权: 是  
-测试地址: https://api.baojie.ink/xmg/book/listByGradeId  
-正式地址: https://api.baojie.ink/xmg/book/listByGradeId  
+测试地址: https://api.baojie.ink/xmg/{mini}/book/listByGradeId  
+正式地址: https://api.baojie.ink/xmg/{mini}/book/listByGradeId  
 请求方式: GET  
 请求参数:
 ```
@@ -337,12 +337,12 @@ gradeId=6
 }
 ```
 
->### 根据册id获取单元列表
+>### 根据教材id获取单元列表
 
 接口用途:   
 接口鉴权: 是  
-测试地址: https://api.baojie.ink/xmg/unit/listByBookId  
-正式地址: https://api.baojie.ink/xmg/unit/listByBookId  
+测试地址: https://api.baojie.ink/xmg/{mini}/unit/listByBookId  
+正式地址: https://api.baojie.ink/xmg/{mini}/unit/listByBookId  
 请求方式: GET  
 请求参数:
 ```
@@ -374,8 +374,8 @@ bookId=1
 
 接口用途:   
 接口鉴权: 是  
-测试地址: https://api.baojie.ink/xmg/knowledge/listByUnitId  
-正式地址: https://api.baojie.ink/xmg/knowledge/listByUnitId  
+测试地址: https://api.baojie.ink/xmg/{mini}/knowledge/listByUnitId  
+正式地址: https://api.baojie.ink/xmg/{mini}/knowledge/listByUnitId  
 请求方式: GET  
 请求参数:
 ```
