@@ -285,3 +285,73 @@ questId=1 //题目id
   "data": null
 }
 ```
+
+>### 生成随机练习
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/mini/train/random  
+正式地址: https://api.baojie.ink/xmg/mini/train/random  
+请求方式: PSOT  
+请求参数:
+```json
+{
+  "userId": 1, //答题人id
+  "unitId": 1, //单元id
+  "knowledgeId": 1 //知识点id 0:综合练习
+}
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": [
+    {
+      "questionData": {
+        "img": "",
+        "questionTextFirst": "1X2=()",
+        "questionTextSecond": "",
+        "questionTextThird": "",
+        "fraction": null,
+        "power": null
+      },
+      "id": 1,
+      "limitTime": 10,
+      "answerType": 0,
+      "optionList": [
+        {
+          "key": "A",
+          "value": "1"
+        },
+        {
+          "key": "B",
+          "value": "10"
+        },
+        {
+          "key": "C",
+          "value": "100"
+        },
+        {
+          "key": "D",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "questionData": {
+        "img": "",
+        "questionTextFirst": "(1+3)X2=()",
+        "questionTextSecond": "",
+        "questionTextThird": "",
+        "fraction": null,
+        "power": null
+      },
+      "id": 12,
+      "limitTime": 10,
+      "answerType": 2,
+      "optionList": null
+    }
+  ]
+}
+```

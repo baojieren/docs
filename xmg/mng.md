@@ -35,7 +35,7 @@
         "userId": 1,
         "phone": "18585131312",
         "userName": "baojieren",
-        "image": "\"\"",
+        "image": "",
         "token": "SESS18585131312",
         "roleList": [
             {
@@ -649,34 +649,70 @@ id=2
 ```
 返回结果:
 ```json
+
 {
-    "code": 0,
-    "msg": "成功",
-    "data": {
-        "total": 1,
-        "list": [
-            {
-                "id": 1, //题目id
-                "name": "2+2等于()?", //题干
-                "answerType": 0, //0:选择题,1:判断题,2:填空题
-                "grade": "六年级", //年级名称
-                "knowledge": "小数点移位", //知识点名称
-                "reviewDes": "", //审核描述
-                "valid": 3, //0:无效，1:审核中 , 2:审核失败 , 3:审核成功
-                "commentPOList": [ //评论列表
-                    {
-                        "id": 1,
-                        "forType": 0, //0:题干,1:解析,2:答案
-                        "comment": "题目有问题", //评论语句
-                        "createTime": "2019-07-06T10:18:16",
-                        "updateTime": "2019-07-06T10:18:16"
-                    }
-                ],
-                "createTime": "2019-06-30 09:36:47" //创建时间
-            }
-        ]
-    }
+  "code": 0,
+  "msg": "成功",
+  "data": {
+    "total": 13,
+    "list": [
+      {
+        "questionData": {
+          "img": "",
+          "questionTextFirst": "2X2=()",
+          "questionTextSecond": "",
+          "questionTextThird": "",
+          "fraction": null,
+          "power": null
+        },
+        "id": 2,
+        "answerType": 2,
+        "grade": "六年级",
+        "knowledge": "小数点移位",
+        "reviewDes": "审核通过",
+        "valid": 3,
+        "commentList": [
+          {
+            "userName": "18585131312",
+            "comment": "答案有误",
+            "createTime": "2019-07-20 10:33:37"
+          }
+        ],
+        "createTime": "2019-07-27 05:17:25"
+      },
+      {
+        "questionData": {
+          "img": "",
+          "questionTextFirst": "1X2=()",
+          "questionTextSecond": "",
+          "questionTextThird": "",
+          "fraction": null,
+          "power": null
+        },
+        "id": 1,
+        "answerType": 0,
+        "grade": "六年级",
+        "knowledge": "小数点移位",
+        "reviewDes": "审核通过",
+        "valid": 3,
+        "commentList": [
+          {
+            "userName": "18585131312",
+            "comment": "题目有问题",
+            "createTime": "2019-07-06 10:18:48"
+          },
+          {
+            "userName": "18585131312",
+            "comment": "答案有误",
+            "createTime": "2019-07-20 10:33:37"
+          }
+        ],
+        "createTime": "2019-07-27 05:17:25"
+      }
+    ]
+  }
 }
+
 ```
 
 >### 审核题目
