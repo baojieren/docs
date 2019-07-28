@@ -55,7 +55,8 @@ bookName="六年级数学"
 {
   "userId": 1, //答题人id
   "unitId": 1, //单元id
-  "knowledgeId": 1 //知识点id（0表示综合练习）
+  "knowledgeId": 1, //知识点id（0表示综合练习）
+  "mode": 1 //0:随机练习,1:针对练习
 }
 ```
 返回结果:
@@ -353,5 +354,75 @@ questId=1 //题目id
       "optionList": null
     }
   ]
+}
+```
+
+>### 生成针对练习
+
+接口用途:   
+接口鉴权:   
+测试地址: https://api.baojie.ink/xmg/mini/train/pro  
+正式地址: https://api.baojie.ink/xmg/mini/train/pro  
+请求方式: POST  
+请求参数:
+```json
+{
+  "userId": 1, //用户id
+  "unitId": 1, //单元id
+  "knowledgeId": 0 //知识点id ,0:综合练习
+}
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": [
+    {
+      "questionData": {
+        "img": "",
+        "questionTextFirst": "100/130=()",
+        "questionTextSecond": "",
+        "questionTextThird": "",
+        "fraction": null,
+        "power": null
+      },
+      "id": 35,
+      "limitTime": 10,
+      "answerType": 2,
+      "optionList": null
+    }
+  ]
+}
+```
+
+>### 交卷
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/mini/train/submit  
+正式地址: https://api.baojie.ink/xmg/mini/train/submit  
+请求方式: POST  
+请求参数:
+```json
+{
+  "recordId": 6, //答题记录id
+  "questList": [
+    {
+      "questId": 5, //题目id
+      "key": "101" //学生填写的答案
+    },{
+      "questId": 35,
+      "key": "-3"
+    }
+  ]
+}
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
 }
 ```
