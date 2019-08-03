@@ -470,3 +470,27 @@ questId=1 //题目id
   "data": null
 }
 ```
+
+>### 用户开通会员（支付下单）
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/order/pre  
+正式地址: https://api.baojie.ink/xmg/order/pre  
+请求方式: POST  
+请求参数:
+```json
+{
+  "userId": 1,
+  "openId": "asdfrqerew",
+  "goodsId": 1// 0：包月，1：半年
+}
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
+}
+```
