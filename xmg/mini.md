@@ -10,6 +10,28 @@
 3. 以后每次请求接口在请求头携带token标识
 4. 请求头token格式: Authorization: Bearer token   //Bearer为固定标识，空格后接token串
 
+## 登陆注册
+
+>### 小程序获取openId
+
+接口用途:   
+接口鉴权: 否  
+测试地址: https://api.baojie.ink/xmg/openId  
+正式地址: https://api.baojie.ink/xmg/openId  
+请求方式: GET  
+请求参数:
+```
+code="asdfg"
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
+}
+```
+
 ## 发现页
 
 >### 模糊搜索教材
