@@ -32,6 +32,28 @@ code="asdfg"
 }
 ```
 
+>### 小程序登陆
+
+接口用途:   
+接口鉴权: 否  
+测试地址: https://api.baojie.ink/xmg/login/mini  
+正式地址: https://api.baojie.ink/xmg/login/mini  
+请求方式: POST  
+请求参数:
+```json
+{
+  "openId": "qweqwe"
+}
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
+}
+```
+
 ## 发现页
 
 >### 模糊搜索教材
