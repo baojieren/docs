@@ -773,3 +773,270 @@ userId=1
     }
 }
 ```
+
+>### 添加教材
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/book/save  
+正式地址: https://api.baojie.ink/xmg/book/save  
+请求方式: POST  
+请求参数:
+```json
+{
+  "bookName": "demoData", //名称
+  "bookDes": "demoData", //描述
+  "gradeId": 1 //年级id
+}
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
+}
+```
+
+>### 删除教材
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/book/delete?bookId=2  
+正式地址: https://api.baojie.ink/xmg/book/delete?bookId=2  
+请求方式: GET  
+请求参数:
+```json
+
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
+}
+```
+
+>### 修改教材
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/book/update  
+正式地址: https://api.baojie.ink/xmg/book/update  
+请求方式: POST  
+请求参数:
+```json
+{
+  "id": 2,
+  "bookName": "demoData", //名称
+  "bookDes": "demoData", //描述
+  "gradeId": 1 //年级id
+}
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
+}
+```
+
+>### 根据id查询教材信息
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/book/one?bookId=2  
+正式地址: https://api.baojie.ink/xmg/book/one?bookId=2  
+请求方式: GET  
+请求参数:
+```json
+
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
+}
+```
+
+>### 添加单元
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/unit/save  
+正式地址: https://api.baojie.ink/xmg/unit/save  
+请求方式: POST  
+请求参数:
+```json
+{
+  "unitName": "demoData", //名称
+  "unitDes": "demoData",//描述
+  "bookId": 1 //教材id
+}
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
+}
+```
+
+>### 删除单元
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/unit/delete?unitId=2  
+正式地址: https://api.baojie.ink/xmg/unit/delete?unitId=2  
+请求方式: GET  
+请求参数:
+```json
+
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
+}
+```
+
+>### 修改单元
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/unit/update  
+正式地址: https://api.baojie.ink/xmg/unit/update  
+请求方式: POST  
+请求参数:
+```json
+{
+  "id": 1,
+  "unitName": "demoData",
+  "unitDes": "demoData",
+  "bookId": 1
+}
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
+}
+```
+
+>### 根据id查询单元信息
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/unit/one?unitId=2  
+正式地址: https://api.baojie.ink/xmg/unit/one?unitId=2  
+请求方式: GET  
+请求参数:
+```json
+
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
+}
+```
+
+>### 添加知识点
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/knowledge/save  
+正式地址: https://api.baojie.ink/xmg/knowledge/save  
+请求方式: POST  
+请求参数:
+```json
+{
+  "knowledgeName": "demoData", //知识点名称
+  "knowledgeDes": "demoData", //知识点描述
+  "unitId": 1 //单元id
+}
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
+}
+```
+
+>### 删除知识点
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/knowledge/delete?knowId=2  
+正式地址: https://api.baojie.ink/xmg/knowledge/delete?knowId=2  
+请求方式: GET  
+请求参数:
+```json
+
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
+}
+```
+
+>### 修改知识点
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/knowledge/update  
+正式地址: https://api.baojie.ink/xmg/knowledge/update  
+请求方式: POST  
+请求参数:
+```json
+{
+  "id": 2, //知识点id
+  "knowledgeName": "demoData", //知识点名称
+  "knowledgeDes": "demoData", //知识点描述
+  "unitId": 1 //单元id
+}
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
+}
+```
+
+>### 根据id查询知识点信息
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/knowledge/one?knowId=2  
+正式地址: https://api.baojie.ink/xmg/knowledge/one?knowId=2  
+请求方式: GET  
+请求参数:
+```json
+
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
+}
+```
