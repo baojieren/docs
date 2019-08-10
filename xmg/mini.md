@@ -16,8 +16,8 @@
 
 接口用途:   
 接口鉴权: 否  
-测试地址: https://api.baojie.ink/xmg/openId  
-正式地址: https://api.baojie.ink/xmg/openId  
+测试地址: https://api.baojie.ink/xmg/openId/mini  
+正式地址: https://api.baojie.ink/xmg/openId/mini  
 请求方式: GET  
 请求参数:
 ```

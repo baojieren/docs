@@ -12,6 +12,50 @@
 
 ## 登陆注册
 
+>### 后台老师扫码获取openId
+
+接口用途:   
+接口鉴权: 否  
+测试地址: https://api.baojie.ink/xmg/openId/mng  
+正式地址: https://api.baojie.ink/xmg/openId/mng  
+请求方式: GET  
+请求参数:
+```
+code="asdfg"
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
+}
+```
+
+>### 注册
+
+接口用途:   
+接口鉴权: 否  
+测试地址: https://api.baojie.ink/xmg/signUp  
+正式地址: https://api.baojie.ink/xmg/signUp  
+请求方式: POST  
+请求参数:
+```json
+{
+  "phone": "18585131312",
+  "password": "123456",
+  "userName": "baojieren",
+  "openId": "dsaeadsagdsa"
+}
+```
+返回结果:
+```json
+{
+    "code": 0,
+    "msg": "成功"
+}
+```
+
 >### 登录
 
 接口用途:   
@@ -44,29 +88,6 @@
             }
         ]
     }
-}
-```
-
->### 注册
-
-接口用途:   
-接口鉴权: 否  
-测试地址: https://api.baojie.ink/xmg/signUp  
-正式地址: https://api.baojie.ink/xmg/signUp  
-请求方式: POST  
-请求参数:
-```json
-{
-  "phone": "18585131312",
-  "password": "123456",
-  "userName": "baojieren"
-}
-```
-返回结果:
-```json
-{
-    "code": 0,
-    "msg": "成功"
 }
 ```
 
@@ -849,6 +870,26 @@ userId=1
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/book/one?bookId=2  
 正式地址: https://api.baojie.ink/xmg/book/one?bookId=2  
+请求方式: GET  
+请求参数:
+```json
+
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
+}
+```
+
+>### 查询教材列表
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/book/list?pageIndex=1&pageSize=5  
+正式地址: https://api.baojie.ink/xmg/book/list?pageIndex=1&pageSize=5  
 请求方式: GET  
 请求参数:
 ```json
