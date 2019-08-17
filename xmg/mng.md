@@ -806,6 +806,7 @@ userId=1
 ```json
 {
   "bookName": "demoData", //名称
+  "cover": "https://img.baojie.ink/a.jpg", //封面图片地址
   "bookDes": "demoData", //描述
   "gradeId": 1 //年级id
 }
@@ -851,8 +852,55 @@ userId=1
 {
   "id": 2,
   "bookName": "demoData", //名称
+  "cover": "https://img.baojie.ink/a.jpg", //封面图片地址
   "bookDes": "demoData", //描述
   "gradeId": 1 //年级id
+}
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
+}
+```
+
+>### 修改教材封面图片
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/book/update/cover  
+正式地址: https://api.baojie.ink/xmg/book/update/cover  
+请求方式: POST  
+请求参数:
+```json
+{
+  "id": 2,
+  "cover": "https://img.baojie.ink/a.jpg" //封面图片地址
+}
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
+}
+```
+
+>### 教材上架下架
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/book/valid  
+正式地址: https://api.baojie.ink/xmg/book/valid  
+请求方式: POST  
+请求参数:
+```json
+{
+  "id": 2,
+  "valid": 1 //0:下架，1：上架
 }
 ```
 返回结果:
@@ -990,6 +1038,21 @@ userId=1
   "code": 0,
   "msg": "成功",
   "data": null
+}
+```
+
+>### 单元上架下架
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/unit/valid  
+正式地址: https://api.baojie.ink/xmg/unit/valid  
+请求方式: POST  
+请求参数:
+```json
+{
+  "id": 2,
+  "valid": 1 //0:下架，1：上架
 }
 ```
 
