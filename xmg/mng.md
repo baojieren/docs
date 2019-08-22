@@ -1068,7 +1068,10 @@ userId=1
 {
   "knowledgeName": "demoData", //知识点名称
   "knowledgeDes": "demoData", //知识点描述
-  "unitId": 1 //单元id
+  "unitId": 1, //单元id
+  "simpleMax": 20, //简单题目最大数量
+  "mediumMax": 20, //中等题目最大数量
+  "hardMax": 10 //困难题目最大数量
 }
 ```
 返回结果:
@@ -1113,7 +1116,10 @@ userId=1
   "id": 2, //知识点id
   "knowledgeName": "demoData", //知识点名称
   "knowledgeDes": "demoData", //知识点描述
-  "unitId": 1 //单元id
+  "unitId": 1, //单元id
+  "simpleMax": 20, //简单题目最大数量
+  "mediumMax": 20, //中等题目最大数量
+  "hardMax": 10 //困难题目最大数量
 }
 ```
 返回结果:
@@ -1141,6 +1147,20 @@ userId=1
 {
   "code": 0,
   "msg": "成功",
-  "data": null
+  "data": {
+    "id": 1,
+    "knowledgeName": "小数点移位",
+    "knowledgeDes": "湖南小学六年级数学上册小数乘法小数点移位",
+    "unitId": 1, //单元id
+    "simpleMax": 20, //简单题最大题目数量
+    "passSimple": 10, //审核通过的简单题数量
+    "mediumMax": 20,
+    "passMedium": 6,
+    "hardMax": 20,
+    "passHard": 4,
+    "valid": 1,
+    "createTime": "2019-06-30T09:34:09",
+    "updateTime": "2019-08-22T09:32:02"
+  }
 }
 ```
