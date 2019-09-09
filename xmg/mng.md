@@ -795,6 +795,32 @@ userId=1
 }
 ```
 
+>### 老师提现
+
+接口用途: 老师提现  
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/finance/trans2wx  
+正式地址: https://api.baojie.ink/xmg/finance/trans2wx  
+请求方式: POST  
+请求参数:
+```json
+{
+  "userId": 1,
+  "realName": "张三", //用户真实姓名
+  "phone": "185815131312", //手机号
+  "openId": "vdafdcadfafdz", //openId
+  "amount": 100 //提现金额
+}
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
+}
+```
+
 >### 添加教材
 
 接口用途:   
