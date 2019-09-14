@@ -236,13 +236,15 @@ recordId=1&knowledgeId=1&natureType=1
 
 接口用途: 生成强化训练练习  
 接口鉴权: 是  
-测试地址: https://api.baojie.ink/xmg/mini/wrongTrain?recordId=1&lastWrongRecordId=2  
-正式地址: https://api.baojie.ink/xmg/mini/wrongTrain?recordId=1&lastWrongRecordId=2  
+测试地址: https://api.baojie.ink/xmg/mini/wrongTrain?recordId=1&lastWrongRecordId=2&knowledgeId=2&natureType=3  
+正式地址: https://api.baojie.ink/xmg/mini/wrongTrain?recordId=1&lastWrongRecordId=2&knowledgeId=2&natureType=3  
 请求方式: GET  
 请求参数:
 ```
 recordId=1 // 答题记录id
 lastWrongRecordId=2 // 最后一次强化训练答题记录id，如果第一次生成错题强化训练，可以不传
+knowledgeId=2 // 知识点错题练习时传
+natureType=3 // 知识点错题练习时传
 ```
 返回结果:
 ```json
@@ -263,16 +265,37 @@ lastWrongRecordId=2 // 最后一次强化训练答题记录id，如果第一次�
 请求参数:
 ```json
 {
-  "recordId": 1, // 错题强化训练练习id
+  "recordId": 307,
   "questList": [
     {
-        "questId": 1, //题目id
-        "key": "demoData" //学生答案
-    },{
-              "questId": 1,
-              "key": "demoData"
-      }
-]
+      "key": "6",
+      "questId": 43
+    },
+    {
+      "key": "C",
+      "questId": 45
+    },
+    {
+      "key": "1",
+      "questId": 49
+    },
+    {
+      "key": "B",
+      "questId": 50
+    },
+    {
+      "key": "1",
+      "questId": 54
+    },
+    {
+      "key": "B",
+      "questId": 59
+    },
+    {
+      "key": "A",
+      "questId": 61
+    }
+  ]
 }
 ```
 返回结果:
