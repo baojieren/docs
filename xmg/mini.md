@@ -242,14 +242,14 @@ recordId=1&knowledgeId=1&natureType=1
 请求参数:
 ```
 recordId=1 // 答题记录id
-lastWrongRecordId=2 // 最后一次强化训练答题记录id
+lastWrongRecordId=2 // 最后一次强化训练答题记录id，第一次
 ```
 返回结果:
 ```json
 {
-  "code": 0,
-  "msg": "成功",
-  "data": null
+  "recordId": 1, //答题记录id
+  "wrongRecordId": 12, //本次生成错题强化训练练习id
+  "questList": [] // 题目列表
 }
 ```
 
@@ -263,7 +263,7 @@ lastWrongRecordId=2 // 最后一次强化训练答题记录id
 请求参数:
 ```json
 {
-  "recordId": 1, // 答题记录id
+  "recordId": 1, // 错题强化训练练习id
   "questList": [
     {
         "questId": 1, //题目id
