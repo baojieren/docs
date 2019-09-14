@@ -383,6 +383,25 @@ questId=1 //题目id
 }
 ```
 
+>### 检查用户是否有资格生成针对训练和强化训练
+
+接口用途:   
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/mini/train/check/permission?userId=182?userId=182  
+正式地址: https://api.baojie.ink/xmg/mini/train/check/permission?userId=182?userId=182  
+请求方式: GET  
+请求参数:
+```
+userId=182 // 用户id
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": true // true: 有资格 false： 没资格，请充值
+}
+```
 >### 生成随机练习
 
 接口用途:   
