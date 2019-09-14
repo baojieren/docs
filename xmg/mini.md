@@ -242,7 +242,7 @@ recordId=1&knowledgeId=1&natureType=1
 请求参数:
 ```
 recordId=1 // 答题记录id
-lastWrongRecordId=2 // 最后一次强化训练答题记录id，第一次
+lastWrongRecordId=2 // 最后一次强化训练答题记录id，如果第一次生成错题强化训练，可以不传
 ```
 返回结果:
 ```json
