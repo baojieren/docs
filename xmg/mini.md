@@ -265,7 +265,7 @@ natureType=3 // 知识点错题练习时传
 请求参数:
 ```json
 {
-  "recordId": 307,
+  "lastWrongRecordId": 307,
   "questList": [
     {
       "key": "6",
