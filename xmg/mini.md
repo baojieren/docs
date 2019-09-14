@@ -232,6 +232,58 @@ recordId=1&knowledgeId=1&natureType=1
 }
 ```
 
+>### 生成强化训练练习
+
+接口用途: 生成强化训练练习  
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/mini/wrongTrain?recordId=1&lastWrongRecordId=2  
+正式地址: https://api.baojie.ink/xmg/mini/wrongTrain?recordId=1&lastWrongRecordId=2  
+请求方式: GET  
+请求参数:
+```
+recordId=1 // 答题记录id
+lastWrongRecordId=2 // 最后一次强化训练答题记录id
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
+}
+```
+
+>### 提交错题强化训练
+
+接口用途: 提交错题强化训练  
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/mini/submitWrong  
+正式地址: https://api.baojie.ink/xmg/mini/submitWrong  
+请求方式: POST  
+请求参数:
+```json
+{
+  "recordId": 1, // 答题记录id
+  "questList": [
+    {
+        "questId": 1, //题目id
+        "key": "demoData" //学生答案
+    },{
+              "questId": 1,
+              "key": "demoData"
+      }
+]
+}
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": null
+}
+```
+
 >### 用户点击有话说
 
 接口用途:   
