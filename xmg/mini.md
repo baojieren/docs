@@ -588,3 +588,72 @@ userId=182 // 用户id
   "data": null
 }
 ```
+
+>### 查询错题强化训练错题列表
+
+接口用途: 查询错题强化训练错题列表  
+接口鉴权: 是  
+测试地址: https://api.baojie.ink/xmg/mini/wrongTrainResult?wrongRecordId=42  
+正式地址: https://api.baojie.ink/xmg/mini/wrongTrainResult?wrongRecordId=42  
+请求方式: GET  
+请求参数:
+```
+wrongRecordId=42 // 错题强化训练记录id
+```
+返回结果:
+```json
+{
+  "code": 0,
+  "msg": "成功",
+  "data": [
+    {
+      "questionData": {
+        "img": "",
+        "questionTextFirst": "文本1",
+        "questionTextSecond": "文本2",
+        "questionTextThird": "文本3",
+        "fraction": [
+          {
+            "fenzi": "5",
+            "fenmu": "6",
+            "integral": "1",
+            "symbol": "中文"
+          },
+          {
+            "fenzi": "1",
+            "fenmu": "2",
+            "integral": "文本",
+            "symbol": "测试"
+          },
+          {
+            "fenzi": "4",
+            "fenmu": "15",
+            "integral": "2",
+            "symbol": "测试"
+          }
+        ],
+        "power": [
+          {
+            "baseNumber": "",
+            "supNumber": "",
+            "symbol": ""
+          }
+        ]
+      },
+      "questId": 46,
+      "recordId": 42,
+      "analysis": {
+        "questionTextFirst": null,
+        "questionTextSecond": null,
+        "fraction": null,
+        "power": null
+      },
+      "answerType": 1,
+      "natureType": 1,
+      "knowledgeId": 1,
+      "questKey": "对",
+      "studentKey": "错"
+    }
+  ]
+}
+```
