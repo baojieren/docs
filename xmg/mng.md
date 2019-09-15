@@ -4,16 +4,15 @@
 :---|:---|:---|:---
 1.0|任宝杰|2019-6-27|初版
 
-## 鉴权步骤
+# 鉴权步骤
 1. 先登陆,后台使用手机号+密码方式登陆,小程序使用openId登陆
 2. 登陆成功获得token
 3. 以后每次请求接口在请求头携带token标识
 4. 请求头token格式: Authorization: Bearer token   //Bearer为固定标识，空格后接token串
 
-## 登陆注册
+# 登陆注册
 
->### 后台老师扫码获取openId
-
+## 后台老师扫码获取openId
 接口用途:   
 接口鉴权: 否  
 测试地址: https://api.baojie.ink/xmg/openId/mng  
@@ -24,7 +23,7 @@
 code="asdfg"
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -32,15 +31,14 @@ code="asdfg"
 }
 ```
 
->### 注册
-
+## 注册
 接口用途:   
 接口鉴权: 否  
 测试地址: https://api.baojie.ink/xmg/signUp  
 正式地址: https://api.baojie.ink/xmg/signUp  
 请求方式: POST  
 请求参数:
-```json
+```
 {
   "phone": "18585131312",
   "password": "123456",
@@ -49,29 +47,28 @@ code="asdfg"
 }
 ```
 返回结果:
-```json
+```
 {
     "code": 0,
     "msg": "成功"
 }
 ```
 
->### 登录
-
+## 登录
 接口用途:   
 接口鉴权: 否  
 测试地址: https://api.baojie.ink/xmg/login  
 正式地址: https://api.baojie.ink/xmg/login  
 请求方式: POST  
 请求参数:
-```json
+```
 {
 	"phone":"18585131312",
 	"password":"142536"
 }
 ```
 返回结果:
-```json
+```
 {
     "code": 0,
     "msg": "成功",
@@ -91,37 +88,35 @@ code="asdfg"
 }
 ```
 
->### 修改密码
-
+## 修改密码
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/updatePass  
 正式地址: https://api.baojie.ink/xmg/updatePass  
 请求方式: POST  
 请求参数:
-```json
+```
 {
 	"phone":"18585131312",
 	"password":"142536" //新密码
 }
 ```
 返回结果:
-```json
+```
 {
     "code": 0,
     "msg": "成功"
 }
 ```
 
->### 修改资料
-
+## 修改资料
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/update  
 正式地址: https://api.baojie.ink/xmg/update  
 请求方式: POST  
 请求参数:
-```json
+```
 {
     "id": 1, //userId
 	"phone":"18585131312", //新手机号
@@ -129,15 +124,14 @@ code="asdfg"
 }
 ```
 返回结果:
-```json
+```
 {
     "code": 0,
     "msg": "成功"
 }
 ```
 
->### 退出登录
-
+## 退出登录
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/logout  
@@ -148,17 +142,16 @@ code="asdfg"
 null
 ```
 返回结果:
-```json
+```
 {
     "code": 0,
     "msg": "成功"
 }
 ```
 
-## 后台首页
+# 后台首页
 
->### 首页老师概览
-
+## 首页老师概览
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/user/overview  
@@ -169,7 +162,7 @@ null
 id=2
 ```
 返回结果:
-```json
+```
 {
     "code": 0,
     "msg": "成功",
@@ -181,15 +174,14 @@ id=2
 }
 ```
 
->### 查询用户列表
-
+## 查询用户列表
 接口用途:   
 接口鉴权: 否  
 测试地址: https://api.baojie.ink/xmg/user/list  
 正式地址: https://api.baojie.ink/xmg/user/list  
 请求方式: POST  
 请求参数:
-```json
+```
 {
     "pageIndex": 1, //页码,默认为1 
     "pageSize": 15, //每页大小,默认为15
@@ -200,7 +192,7 @@ id=2
 }
 ```
 返回结果:
-```json
+```
 {
     "code": 0,
     "msg": "成功",
@@ -234,10 +226,9 @@ id=2
 }
 ```
 
-## 题库中心
+# 题库中心
 
->### 题库中心概览
-
+## 题库中心概览
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/quest/allOverview  
@@ -248,7 +239,7 @@ id=2
 null
 ```
 返回结果:
-```json
+```
 {
     "code": 0,
     "msg": "成功",
@@ -284,8 +275,7 @@ null
 }
 ```
 
->### 获取所有的年级列表
-
+## 获取所有的年级列表
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/{mini}/grade/all  
@@ -296,7 +286,7 @@ null
 null
 ```
 返回结果:
-```json
+```
 {
     "code": 0,
     "msg": "成功",
@@ -316,8 +306,7 @@ null
 }
 ```
 
->### 根据年级id获取教材列表
-
+## 根据年级id获取教材列表
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/{mini}/book/listByGradeId  
@@ -328,7 +317,7 @@ null
 gradeId=6
 ```
 返回结果:
-```json
+```
 {
     "code": 0,
     "msg": "成功",
@@ -358,8 +347,7 @@ gradeId=6
 }
 ```
 
->### 根据教材id获取单元列表
-
+## 根据教材id获取单元列表
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/{mini}/unit/listByBookId  
@@ -370,7 +358,7 @@ gradeId=6
 bookId=1
 ```
 返回结果:
-```json
+```
 {
     "code": 0,
     "msg": "成功",
@@ -391,8 +379,7 @@ bookId=1
 }
 ```
 
->### 根据单元id获取知识点列表
-
+## 根据单元id获取知识点列表
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/{mini}/knowledge/listByUnitId  
@@ -403,7 +390,7 @@ bookId=1
 unitId=1
 ```
 返回结果:
-```json
+```
 {
     "code": 0,
     "msg": "成功",
@@ -422,8 +409,7 @@ unitId=1
 }
 ```
 
->### 获取所有知识点列表
-
+## 获取所有知识点列表
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/knowledge/all  
@@ -434,7 +420,7 @@ unitId=1
 null
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -453,8 +439,7 @@ null
 }
 ```
 
->### 根据知识点id获取题目数
-
+## 根据知识点id获取题目数
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/type/diffcult  
@@ -465,7 +450,7 @@ null
 knowledgeId=1
 ```
 返回结果:
-```json
+```
 {
     "code": 0,
     "msg": "成功",
@@ -489,8 +474,7 @@ knowledgeId=1
 }
 ```
 
->### 获取上传图片token
-
+## 获取上传图片token
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/img/token  
@@ -501,7 +485,7 @@ knowledgeId=1
 fileName=aaa.png //图片名称
 ```
 返回结果:
-```json
+```
 {
     "code": 0,
     "msg": "成功",
@@ -512,15 +496,14 @@ fileName=aaa.png //图片名称
 }
 ```
 
->### 上传题目
-
+## 上传题目
 接口用途:   
 接口鉴权: 否  
 测试地址: https://api.baojie.ink/xmg/quest/save  
 正式地址: https://api.baojie.ink/xmg/quest/save  
 请求方式: POST  
 请求参数:
-```json
+```
 {
     "owner": 1, //上传者id
     "name": "2 X 2 = 5 对吗?", //题干
@@ -538,7 +521,7 @@ fileName=aaa.png //图片名称
 }
 ```
 返回结果:
-```json
+```
 {
     "code": 0,
     "msg": "成功",
@@ -546,8 +529,7 @@ fileName=aaa.png //图片名称
 }
 ```
 
->### 删除题目
-
+## 删除题目
 接口用途:   
 接口鉴权: 否  
 测试地址: https://api.baojie.ink/xmg/quest/delete  
@@ -558,7 +540,7 @@ fileName=aaa.png //图片名称
 id=2
 ```
 返回结果:
-```json
+```
 {
     "code": 0,
     "msg": "成功",
@@ -566,8 +548,7 @@ id=2
 }
 ```
 
->### 根据id查询题目
-
+## 根据id查询题目
 接口用途:   
 接口鉴权: 否  
 测试地址: https://api.baojie.ink/xmg/quest/one  
@@ -578,7 +559,7 @@ id=2
 id=2
 ```
 返回结果:
-```json
+```
 {
     "code": 0,
     "msg": "成功",
@@ -611,15 +592,14 @@ id=2
 }
 ```
 
->### 根据id修改题目
-
+## 根据id修改题目
 接口用途:   
 接口鉴权: 否  
 测试地址: https://api.baojie.ink/xmg/quest/update  
 正式地址: https://api.baojie.ink/xmg/quest/update  
 请求方式: POST  
 请求参数:
-```json
+```
 {
     "id":2,
     "owner": 1,
@@ -638,7 +618,7 @@ id=2
 }
 ```
 返回结果:
-```json
+```
 {
     "code": 0,
     "msg": "成功",
@@ -646,15 +626,14 @@ id=2
 }
 ```
 
->### 查询题目列表
-
+## 查询题目列表
 接口用途:   
 接口鉴权: 否  
 测试地址: https://api.baojie.ink/xmg/quest/list  
 正式地址: https://api.baojie.ink/xmg/quest/list  
 请求方式: POST  
 请求参数:
-```json
+```
 {
   "userId": 1, //题目上传者id
   "startTime": "", //开始时间
@@ -669,7 +648,7 @@ id=2
 }
 ```
 返回结果:
-```json
+```
 
 {
   "code": 0,
@@ -736,15 +715,14 @@ id=2
 
 ```
 
->### 审核题目
-
+## 审核题目
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/quest/review  
 正式地址: https://api.baojie.ink/xmg/quest/review  
 请求方式: POST  
 请求参数:
-```json
+```
 {
   "id": 8, //题目id
   "reviewDes": "不过", //审核说明
@@ -752,7 +730,7 @@ id=2
 }
 ```
 返回结果:
-```json
+```
 {
     "code": 0,
     "msg": "成功",
@@ -760,10 +738,9 @@ id=2
 }
 ```
 
-## 我的财务
+# 我的财务
 
->### 老师个人财务中心
-
+## 老师个人财务中心
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/finance/oneSelf  
@@ -774,7 +751,7 @@ id=2
 userId=1
 ```
 返回结果:
-```json
+```
 {
     "code": 0,
     "msg": "成功",
@@ -795,15 +772,14 @@ userId=1
 }
 ```
 
->### 老师提现
-
+## 老师提现
 接口用途: 老师提现  
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/finance/trans2wx  
 正式地址: https://api.baojie.ink/xmg/finance/trans2wx  
 请求方式: POST  
 请求参数:
-```json
+```
 {
   "userId": 1,
   "realName": "张三", //用户真实姓名
@@ -813,7 +789,7 @@ userId=1
 }
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -821,15 +797,14 @@ userId=1
 }
 ```
 
->### 添加教材
-
+## 添加教材
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/book/save  
 正式地址: https://api.baojie.ink/xmg/book/save  
 请求方式: POST  
 请求参数:
-```json
+```
 {
   "bookName": "demoData", //名称
   "cover": "https://img.baojie.ink/a.jpg", //封面图片地址
@@ -838,7 +813,7 @@ userId=1
 }
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -846,19 +821,18 @@ userId=1
 }
 ```
 
->### 删除教材
-
+## 删除教材
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/book/delete?bookId=2  
 正式地址: https://api.baojie.ink/xmg/book/delete?bookId=2  
 请求方式: GET  
 请求参数:
-```json
+```
 
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -866,15 +840,14 @@ userId=1
 }
 ```
 
->### 修改教材
-
+## 修改教材
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/book/update  
 正式地址: https://api.baojie.ink/xmg/book/update  
 请求方式: POST  
 请求参数:
-```json
+```
 {
   "id": 2,
   "bookName": "demoData", //名称
@@ -884,7 +857,7 @@ userId=1
 }
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -892,22 +865,21 @@ userId=1
 }
 ```
 
->### 修改教材封面图片
-
+## 修改教材封面图片
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/book/update/cover  
 正式地址: https://api.baojie.ink/xmg/book/update/cover  
 请求方式: POST  
 请求参数:
-```json
+```
 {
   "id": 2,
   "cover": "https://img.baojie.ink/a.jpg" //封面图片地址
 }
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -915,22 +887,21 @@ userId=1
 }
 ```
 
->### 教材上架下架
-
+## 教材上架下架
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/book/valid  
 正式地址: https://api.baojie.ink/xmg/book/valid  
 请求方式: POST  
 请求参数:
-```json
+```
 {
   "id": 2,
   "valid": 1 //0:下架，1：上架
 }
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -938,19 +909,18 @@ userId=1
 }
 ```
 
->### 根据id查询教材信息
-
+## 根据id查询教材信息
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/book/one?bookId=2  
 正式地址: https://api.baojie.ink/xmg/book/one?bookId=2  
 请求方式: GET  
 请求参数:
-```json
+```
 
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -958,19 +928,18 @@ userId=1
 }
 ```
 
->### 查询教材列表
-
+## 查询教材列表
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/book/list?pageIndex=1&pageSize=5  
 正式地址: https://api.baojie.ink/xmg/book/list?pageIndex=1&pageSize=5  
 请求方式: GET  
 请求参数:
-```json
+```
 
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -978,15 +947,14 @@ userId=1
 }
 ```
 
->### 添加单元
-
+## 添加单元
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/unit/save  
 正式地址: https://api.baojie.ink/xmg/unit/save  
 请求方式: POST  
 请求参数:
-```json
+```
 {
   "unitName": "demoData", //名称
   "unitDes": "demoData",//描述
@@ -994,7 +962,7 @@ userId=1
 }
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -1002,19 +970,18 @@ userId=1
 }
 ```
 
->### 删除单元
-
+## 删除单元
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/unit/delete?unitId=2  
 正式地址: https://api.baojie.ink/xmg/unit/delete?unitId=2  
 请求方式: GET  
 请求参数:
-```json
+```
 
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -1022,15 +989,14 @@ userId=1
 }
 ```
 
->### 修改单元
-
+## 修改单元
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/unit/update  
 正式地址: https://api.baojie.ink/xmg/unit/update  
 请求方式: POST  
 请求参数:
-```json
+```
 {
   "id": 1,
   "unitName": "demoData",
@@ -1039,7 +1005,7 @@ userId=1
 }
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -1047,19 +1013,18 @@ userId=1
 }
 ```
 
->### 根据id查询单元信息
-
+## 根据id查询单元信息
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/unit/one?unitId=2  
 正式地址: https://api.baojie.ink/xmg/unit/one?unitId=2  
 请求方式: GET  
 请求参数:
-```json
+```
 
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -1067,30 +1032,28 @@ userId=1
 }
 ```
 
->### 单元上架下架
-
+## 单元上架下架
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/unit/valid  
 正式地址: https://api.baojie.ink/xmg/unit/valid  
 请求方式: POST  
 请求参数:
-```json
+```
 {
   "id": 2,
   "valid": 1 //0:下架，1：上架
 }
 ```
 
->### 添加知识点
-
+## 添加知识点
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/knowledge/save  
 正式地址: https://api.baojie.ink/xmg/knowledge/save  
 请求方式: POST  
 请求参数:
-```json
+```
 {
   "knowledgeName": "demoData", //知识点名称
   "knowledgeDes": "demoData", //知识点描述
@@ -1101,7 +1064,7 @@ userId=1
 }
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -1109,19 +1072,18 @@ userId=1
 }
 ```
 
->### 删除知识点
-
+## 删除知识点
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/knowledge/delete?knowId=2  
 正式地址: https://api.baojie.ink/xmg/knowledge/delete?knowId=2  
 请求方式: GET  
 请求参数:
-```json
+```
 
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -1129,15 +1091,14 @@ userId=1
 }
 ```
 
->### 修改知识点
-
+## 修改知识点
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/knowledge/update  
 正式地址: https://api.baojie.ink/xmg/knowledge/update  
 请求方式: POST  
 请求参数:
-```json
+```
 {
   "id": 2, //知识点id
   "knowledgeName": "demoData", //知识点名称
@@ -1149,7 +1110,7 @@ userId=1
 }
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -1157,19 +1118,18 @@ userId=1
 }
 ```
 
->### 根据id查询知识点信息
-
+## 根据id查询知识点信息
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/knowledge/one?knowId=2  
 正式地址: https://api.baojie.ink/xmg/knowledge/one?knowId=2  
 请求方式: GET  
 请求参数:
-```json
+```
 
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",

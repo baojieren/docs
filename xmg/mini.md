@@ -4,16 +4,15 @@
 :---|:---|:---|:---
 1.0|任宝杰|2019-7-1|初版
 
-## 鉴权步骤
+# 鉴权步骤
 1. 先登陆,后台使用手机号+密码方式登陆,小程序使用openId登陆
 2. 登陆成功获得token
 3. 以后每次请求接口在请求头携带token标识
 4. 请求头token格式: Authorization: Bearer token   //Bearer为固定标识，空格后接token串
 
-## 登陆注册
+# 登陆注册
 
->### 小程序获取openId
-
+## 小程序获取openId
 接口用途:   
 接口鉴权: 否  
 测试地址: https://api.baojie.ink/xmg/openId/mini  
@@ -24,7 +23,7 @@
 code="asdfg"
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -32,21 +31,20 @@ code="asdfg"
 }
 ```
 
->### 小程序登陆
-
+## 小程序登陆
 接口用途:   
 接口鉴权: 否  
 测试地址: https://api.baojie.ink/xmg/login/mini  
 正式地址: https://api.baojie.ink/xmg/login/mini  
 请求方式: POST  
 请求参数:
-```json
+```
 {
   "openId": "qweqwe"
 }
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -56,8 +54,7 @@ code="asdfg"
 
 ## 发现页
 
->### 模糊搜索教材
-
+## 模糊搜索教材
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/mini/search/book  
@@ -68,7 +65,7 @@ code="asdfg"
 bookName="六年级数学"
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -87,15 +84,14 @@ bookName="六年级数学"
 }
 ```
 
->### 查询最后一次答题记录
-
+## 查询最后一次答题记录
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/mini/lastRecord  
 正式地址: https://api.baojie.ink/xmg/mini/lastRecord  
 请求方式: POST  
 请求参数:
-```json
+```
 {
   "userId": 1, //答题人id
   "unitId": 1, //单元id
@@ -104,7 +100,7 @@ bookName="六年级数学"
 }
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -154,8 +150,7 @@ bookName="六年级数学"
 }
 ```
 
->### 上次练习错题
-
+## 上次练习错题
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/mini/allWrong  
@@ -166,7 +161,7 @@ bookName="六年级数学"
 recordId=1 //答题记录id
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -202,8 +197,7 @@ recordId=1 //答题记录id
 }
 ```
 
->### 上次练习知识点错题情况
-
+## 上次练习知识点错题情况
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/mini/knowledgeWrong  
@@ -214,7 +208,7 @@ recordId=1 //答题记录id
 recordId=1&knowledgeId=1&natureType=1
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -232,8 +226,7 @@ recordId=1&knowledgeId=1&natureType=1
 }
 ```
 
->### 生成强化训练练习
-
+## 生成强化训练练习
 接口用途: 生成强化训练练习  
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/mini/wrongTrain?recordId=1&lastWrongRecordId=2&knowledgeId=2&natureType=3  
@@ -247,7 +240,7 @@ knowledgeId=2 // 知识点错题练习时传
 natureType=3 // 知识点错题练习时传
 ```
 返回结果:
-```json
+```
 {
   "recordId": 1, //答题记录id
   "wrongRecordId": 12, //本次生成错题强化训练练习id
@@ -255,15 +248,14 @@ natureType=3 // 知识点错题练习时传
 }
 ```
 
->### 提交错题强化训练
-
+## 提交错题强化训练
 接口用途: 提交错题强化训练  
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/mini/submitWrong  
 正式地址: https://api.baojie.ink/xmg/mini/submitWrong  
 请求方式: POST  
 请求参数:
-```json
+```
 {
   "lastWrongRecordId": 42,
   "questList": [
@@ -299,7 +291,7 @@ natureType=3 // 知识点错题练习时传
 }
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -307,8 +299,7 @@ natureType=3 // 知识点错题练习时传
 }
 ```
 
->### 用户点击有话说
-
+## 用户点击有话说
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/mini/wyhs  
@@ -319,7 +310,7 @@ natureType=3 // 知识点错题练习时传
 questId=1 //题目id
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -373,15 +364,14 @@ questId=1 //题目id
 }
 ```
 
->### 用户提交评论
-
+## 用户提交评论
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/mini/comment  
 正式地址: https://api.baojie.ink/xmg/mini/comment  
 请求方式: POST  
 请求参数:
-```json
+```
 {
   "list": [
     {
@@ -398,7 +388,7 @@ questId=1 //题目id
 }
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -406,8 +396,7 @@ questId=1 //题目id
 }
 ```
 
->### 检查用户是否有资格生成针对训练和强化训练
-
+## 检查用户是否有资格生成针对训练和强化训练
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/mini/train/check/permission?userId=182?userId=182  
@@ -418,22 +407,21 @@ questId=1 //题目id
 userId=182 // 用户id
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
   "data": true // true: 有资格 false： 没资格，请充值
 }
 ```
->### 生成随机练习
-
+## 生成随机练习
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/mini/train/random  
 正式地址: https://api.baojie.ink/xmg/mini/train/random  
 请求方式: PSOT  
 请求参数:
-```json
+```
 {
   "userId": 1, //答题人id
   "unitId": 1, //单元id
@@ -441,7 +429,7 @@ userId=182 // 用户id
 }
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -495,15 +483,14 @@ userId=182 // 用户id
 }
 ```
 
->### 生成针对练习
-
+## 生成针对练习
 接口用途:   
 接口鉴权:   
 测试地址: https://api.baojie.ink/xmg/mini/train/pro  
 正式地址: https://api.baojie.ink/xmg/mini/train/pro  
 请求方式: POST  
 请求参数:
-```json
+```
 {
   "userId": 1, //用户id
   "unitId": 1, //单元id
@@ -511,7 +498,7 @@ userId=182 // 用户id
 }
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -534,15 +521,14 @@ userId=182 // 用户id
 }
 ```
 
->### 交卷
-
+## 交卷
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/mini/train/submit  
 正式地址: https://api.baojie.ink/xmg/mini/train/submit  
 请求方式: POST  
 请求参数:
-```json
+```
 {
   "recordId": 6, //答题记录id
   "questList": [
@@ -557,7 +543,7 @@ userId=182 // 用户id
 }
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -565,15 +551,14 @@ userId=182 // 用户id
 }
 ```
 
->### 用户开通会员（支付下单）
-
+## 用户开通会员（支付下单）
 接口用途:   
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/order/pre  
 正式地址: https://api.baojie.ink/xmg/order/pre  
 请求方式: POST  
 请求参数:
-```json
+```
 {
   "userId": 1,
   "openId": "asdfrqerew",
@@ -581,7 +566,7 @@ userId=182 // 用户id
 }
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
@@ -589,8 +574,7 @@ userId=182 // 用户id
 }
 ```
 
->### 查询错题强化训练错题列表
-
+## 查询错题强化训练错题列表
 接口用途: 查询错题强化训练错题列表  
 接口鉴权: 是  
 测试地址: https://api.baojie.ink/xmg/mini/wrongTrainResult?wrongRecordId=42  
@@ -601,7 +585,7 @@ userId=182 // 用户id
 wrongRecordId=42 // 错题强化训练记录id
 ```
 返回结果:
-```json
+```
 {
   "code": 0,
   "msg": "成功",
